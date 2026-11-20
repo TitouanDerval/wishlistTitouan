@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#050912">
+  <meta name="description" content="Ma liste d'idées cadeaux.">
+  <title>MY WISHLIST</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="data.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <h1>MY WISHLIST</h1>
+    <span class="header-line" aria-hidden="true"></span>
+    <span id="count" aria-live="polite"></span>
+  </header>
+
+  <main>
+    <div id="gallery" class="gallery" role="list" aria-label="Idées cadeaux"></div>
+    <p id="empty" hidden>Aucune idée pour le moment.</p>
+  </main>
+
+  <dialog id="gift-dialog" aria-labelledby="gift-title">
+    <button id="close-dialog" class="close" type="button" aria-label="Fermer">×</button>
+    <div class="dialog-layout">
+      <div class="dialog-visual">
+        <img id="gift-image" alt="">
+      </div>
+      <div class="dialog-content">
+        <h2 id="gift-title"></h2>
+        <p id="gift-brand" class="brand"></p>
+        <p id="gift-description" class="description"></p>
+        <div id="gift-note-wrap" class="note"><p id="gift-note"></p></div>
+        <div id="gift-important-wrap" class="important">
+          <p id="gift-important"></p>
+          <a id="gift-important-link" target="_blank" rel="noopener noreferrer">En savoir plus</a>
+        </div>
+        <a id="gift-link" class="gift-link" target="_blank" rel="noopener noreferrer">Voir le produit →</a>
+      </div>
+    </div>
+  </dialog>
+</body>
+</html>
